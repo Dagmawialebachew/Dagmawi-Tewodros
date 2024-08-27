@@ -26,148 +26,6 @@ document.getElementById('form')
     });
 });
     
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from('.slide-in-right', {
-            scrollTrigger: {
-                trigger: 'slide-in-right',
-                start: 'bottom 60%', // 
-                toggleActions: 'play play none complete'
-            },
-            opacity: 0,
-            x: 200,
-            duration: 1.5,
-        }    
-    );
-    gsap.from('.animate-on-scroll-1', {
-        scrollTrigger: {
-            trigger: '.animate-on-scroll-1',
-            start: 'bottom 80%',
-            toggleActions: 'play play none complete'
-        },
-        opacity: 0,
-        y: 300,  // Vertical animation
-        duration: 5,
-    });
-    gsap.from('.slide-in-left', {
-        scrollTrigger: {
-            trigger: '.slide-in-left',
-            start: 'top 80%',
-            toggleActions: 'play none none none'
-        },
-        x: -200,   // Slide in from the left (negative x value)
-        opacity: 0,
-        duration: 1.5,  // Animation duration
-    });
-
-    gsap.from('.div-services div', {
-        scrollTrigger: {
-            trigger: '.div-services div', // Element that triggers the animation
-            start: 'top 80%', // Animation starts when the top of the element is 80% from the top of the viewport
-            toggleActions: 'play none none none', // Play the animation once, no reset, no reverse
-        },
-        x: 0,   
-        opacity: 0, 
-        duration: 0.5,  
-        stagger: 0.3,  
-    });
-    gsap.from('.box', {
-        scrollTrigger: {
-            trigger: '.box', // Element that triggers the animation
-            start: 'top 80%', // Animation starts when the top of the element is 80% from the top of the viewport
-            toggleActions: 'play none none none', // Play the animation once, no reset, no reverse
-        },
-        x: 0,   
-        opacity: 0, 
-        duration: 0.5,  
-        stagger: 0.3,  
-    });
-    gsap.from('#home p, #home h1, #home button', {
-        scrollTrigger: {
-            trigger: '#home',
-            start: 'top 80%', 
-            toggleActions: 'play none none none',
-        },
-        x: 0,
-        opacity: 0,
-        duration: 1.5,
-        stagger: 0.5 
-    });
-    gsap.from('#project-managment', {
-        scrollTrigger: {
-            trigger: '#project-managment',
-            start: 'top 80%', 
-            toggleActions: 'play none none none',
-        },
-        y: -200,
-        opacity: 0,
-        duration: 1.5,
-    });
-    gsap.from('#form > div:nth-child(2)', {
-        scrollTrigger: {
-            trigger: '#contact-me',
-            start: 'top 80%', 
-            toggleActions: 'play none none none',
-        },
-        y: -200,
-        opacity: 0,
-        duration: 3,
-        stagger: 0.3 
-    });
-    gsap.from('#pricing div', {
-        scrollTrigger: {
-            trigger: '#pricing div',
-            start: 'top 80%', 
-            toggleActions: 'play none none none',
-        },
-        scale:0.7,
-        opacity: 0,
-        duration: 3,
-        stagger: 0.3 
-    });
-    gsap.utils.toArray('#My-projects p, #pricing  p:nth-of-type(1)').forEach(element1=> {
-        gsap.from(element1, {
-            scrollTrigger: {
-                trigger: element1,
-                start: 'top 80%', 
-                toggleActions: 'play none none none',
-            },
-            opacity: 0,
-            duration: 8,
-        });
-            
-        })
-    
-    gsap.utils.toArray('section:not(#home, #about, #project-managment) h1').forEach(element => {
-        gsap.from(element, {
-            scrollTrigger: {
-                trigger: element,  
-                start: 'top 80%', 
-                toggleActions: 'play none none none',  
-            },
-            y: 100,
-            opacity: 0,
-            duration: 1.5,
-            stagger: 0.2
-        });
-    });
- 
-    
-    
-
-   
-
-let hoverElements = document.querySelectorAll('.div-services div')
-hoverElements.forEach((hover) => 
-     {
-      hover.addEventListener('mouseenter', () => {
-     gsap.to(hover, { scale: 1.05, duration: 0.3, ease: "power1.inOut"})
-});
-        hover.addEventListener('mouseleave', () => {
-            gsap.to(hover, { scale: 1, duration: 0.4, ease: "power1.inOut" })
-
-        })
-    })
 
         function checkWidth() {
             const div = document.getElementById('cardDiv');
@@ -202,10 +60,9 @@ function toggleFun() {
      const isVisible = nav.classList.contains('nav-active')
      toggle.src = isVisible ? 'images/slider.png': 'images/toggle.png'
     
-}
 
- 
-   
+
+    }
         
     function restartAnimation() {
       const airplane = document.querySelector('.airplane');

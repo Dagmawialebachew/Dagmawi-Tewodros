@@ -38,9 +38,7 @@
  .right-section-2 p {
     margin-bottom: 2rem;
  }
- .left-section-2 {
-   border-radius: 4vh;
- }
+ 
  nav {
    display: none;
  }
@@ -63,9 +61,10 @@
    
  .div-services  {
    display: grid;
-   grid-template-columns: auto;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 50%));
    width: 90%;
    place-content: center;
+   place-items: center;
 }
 
 #project-managment {
@@ -96,6 +95,9 @@
      left: 10%;
      display: inline;
    }
+   .container {
+    margin-left: 22%;
+   }
    .left-section {
      min-width: 100%;
      margin-top: 117%;
@@ -119,7 +121,6 @@
  }
    #background-video {
      max-width: 80%;
-    margin-left: 10%;
     max-width: 70%;
    }
    form {
@@ -153,7 +154,7 @@ form > div:nth-child(2)  {
      }
 
      .container {
-       padding-inline: 7vh;
+       margin-left: 12%;
      }
      footer{
        margin-top: 9rem;
@@ -162,8 +163,9 @@ form > div:nth-child(2)  {
      margin-left: 16%;
    }
    .left-section-2 {
-     border-radius: 10vh;
-     margin-bottom: 10%;
+    margin-bottom: 10%;
+    width: 20rem;
+    height: 20rem;
    }
 }
 
